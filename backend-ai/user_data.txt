@@ -1,8 +1,9 @@
 #!/bin/bash
 # Update and install required packages
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install -y python3 python3-pip
+yum update -y
+yum upgrade -y
+yum install -y python3 
+yum install -y pip
 
 # Navigate to the desired directory and clone the repository
 mkdir -p /server
