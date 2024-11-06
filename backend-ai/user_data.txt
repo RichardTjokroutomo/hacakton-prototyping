@@ -5,10 +5,10 @@ sudo apt upgrade -y
 sudo apt install -y python3 python3-pip
 
 # Navigate to the desired directory and clone the repository
-mkdir -p /home/ubuntu/flask_app
-cd /home/ubuntu/flask_app
+mkdir -p /server
+cd /server
 git clone https://github.com/RichardTjokroutomo/hacakton-prototyping.git
-cd hackathon-prototyping/backend  # Move to the backend directory
+cd hacakton-prototyping/backend-ai  # Move to the backend directory
 
 # Install required Python dependencies from the existing requirements.txt file
 pip3 install -r requirements.txt
