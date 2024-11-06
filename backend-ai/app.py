@@ -4,6 +4,7 @@ import os
 
 from processImage import get_corners, crop_image
 from ocr import extract_text
+from ocr_improve_spelling import get_closest_words
 
 app = Flask(__name__)
 
@@ -57,6 +58,10 @@ def upload_file():
     # 4) extract text
     # ============================================================================
     res_text = extract_text(cropped_src_filepath)
+    res_text = res_text.lower()
+    word_list = ["fragile", "flammable", "perishable", "explosive", "hazardous", "refrigerate", "animal"]
+    res_text = get_closest_words(res_text, word_list)
+
 
 
     # 5) delete image

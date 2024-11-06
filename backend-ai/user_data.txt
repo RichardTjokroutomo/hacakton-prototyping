@@ -15,4 +15,5 @@ cd hacakton-prototyping/backend-ai  # Move to the backend directory
 pip3 install -r requirements.txt
 
 # Start the Flask app directly using Python
-nohup python3 app.py &  # Runs the app in the background
+tmux new -s flaskapp
+python3 app.py
